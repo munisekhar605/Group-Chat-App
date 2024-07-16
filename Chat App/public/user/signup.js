@@ -7,10 +7,17 @@ async function userSignUp(event){
     }
     console.log(userSignUpDetails)
     try{
-        const userSignUpDataPost= await axios.post('http://localhost:3000/signup',userSignUpDetails);
-        event.target.reset()
+        const userSignUpDataPost= await axios.post('http://localhost:3000/user/signup',userSignUpDetails);
+        event.target.reset();
+        alert('SignUp Success');
+        window.location.href='./login.html'
+        console.log(userSignUpDataPost)
     }catch(err){
-        console.log('err')
+        if(err.response.status==400){
+            alert('User already signed up. go login');
+            window.location.href='./login.html'
+        }
+        console.log(err.response.status)
     }
 
 } 

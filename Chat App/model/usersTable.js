@@ -13,6 +13,7 @@ const UserTable=sequelize.define('usersTable',{
     },
     email:{
         type:Sequelize.STRING,
+        unique:true,
         allowNull:false
     },
     password:{
