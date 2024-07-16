@@ -1,4 +1,4 @@
-function userSignUp(event){
+async function userSignUp(event){
     event.preventDefault();
     const userSignUpDetails={
         name:event.target.name.value,
@@ -6,4 +6,6 @@ function userSignUp(event){
         password:event.target.password.value
     }
     console.log(userSignUpDetails)
+    const userSignUpDataPost= await axios.post('http://localhost:3000/signup',userSignUpDetails)
+    console.log(userSignUpDataPost)
 } 

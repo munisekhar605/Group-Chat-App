@@ -1,5 +1,7 @@
 body{
     height: 100vh;
+    width:99vw;
+
 }
 .login-form-container{
     height: 100vh;
