@@ -6,6 +6,11 @@ async function userSignUp(event){
         password:event.target.password.value
     }
     console.log(userSignUpDetails)
-    const userSignUpDataPost= await axios.post('http://localhost:3000/signup',userSignUpDetails)
-    console.log(userSignUpDataPost)
+    try{
+        const userSignUpDataPost= await axios.post('http://localhost:3000/signup',userSignUpDetails);
+        event.target.reset()
+    }catch(err){
+        console.log('err')
+    }
+
 } 
