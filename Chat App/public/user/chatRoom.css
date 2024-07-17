@@ -5,23 +5,28 @@ body{
    width: 30px;
    height: 45px;
    margin-left:10px;
+   margin-left: 30px; 
+   margin-right: 20px; 
 }
 .chat-page-logo-container{
     font-family: roboto;
     font-size: xx-large;
     font-weight: 800;
+    background: linear-gradient(to right, rgb(237, 235, 235), rgb(255, 0, 0));
+    border-radius: 15px;
 }
 .chat-app-container{
-    text-align: center;
+}
+.chat-app-input-container-main{
+  
 }
 .chat-app-input-container{
-    display: flex;
-    margin-top: 85vh;
     justify-content: center;
     justify-items: end;
     background: linear-gradient(to right, red, black);
     border-radius: 10px;
     padding: 10px;
+    
 }
 .chat-app-input-item{
     padding: 10px;
@@ -38,4 +43,16 @@ body{
     font-family: roboto;
     font-size: large;
     margin-left: 10px;
+}
+.chat-container-dom{
+
+}
+.chat-item{
+    
+    background-color: rgb(216, 216, 216);
+    border-radius: 30px;
+    margin: 19px;
+    padding: 10px;
+    font-family: roboto;
+    font-size: x-large;
 }

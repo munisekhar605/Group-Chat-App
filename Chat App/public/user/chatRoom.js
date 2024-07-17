@@ -12,19 +12,28 @@ async function masageSend(event){
     }
 }
 
-window.onload=async ()=>{
-   try{
-    const masages=await axios.get('http://localhost:3000/user/masages');
-    console.log(masages.data[1].masage)
-    for(let i=0;i<masages.data.length;i++){
-        displayMasages(masages.data[i].masage)
-    }
- 
-   }catch(err){
-    console.log(err)
-   }
-}
 
-function displayMasages(masasge){
- console.log(masasge)
+setInterval(async function(){
+    try{
+        const masages=await axios.get('http://localhost:3000/user/masages');
+        displayMasages(masages.data)
+       }catch(err){
+        console.log(err)
+       }
+},1000)
+
+function displayMasages(masasges){
+    const element=document.getElementById('masages');
+    element.innerText=''
+    const tElement=document.createElement('div')
+    tElement.className='chat-container-dom'
+    for(let i=0;i<masasges.length;i++){
+        let tE=document.createElement('div')
+        tE.innerHTML=`<div class="chat-item">${masasges[i].masage}</div>`;
+        tElement.appendChild(tE)
+        console.log('i')
+    }
+    element.appendChild(tElement)
+
+ 
 }
