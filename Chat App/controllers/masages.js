@@ -7,6 +7,12 @@ const masageSave=(req,res,next)=>{
     })
 }
 
+const allMasages=async (req,res,next)=>{
+    console.log('hi')
+    const masages=await masagesTable.findAll({attributs:['masages']})
+    res.status(200).send(masages)
+}
 module.exports={
-    masageSave
+    masageSave,
+    allMasages
 }

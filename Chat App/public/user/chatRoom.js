@@ -4,6 +4,27 @@ async function masageSend(event){
     const masage={
         masage:event.target.masage.value
     };
-    const masageSave=await axios.post('http://localhost:3000/user/masagesave',masage);
+    try{
+        const masageSave=await axios.post('http://localhost:3000/user/masagesave',masage);
+        
+    }catch(err){
+        alert('geting error')
+    }
 }
-console.log('jj')
+
+window.onload=async ()=>{
+   try{
+    const masages=await axios.get('http://localhost:3000/user/masages');
+    console.log(masages.data[1].masage)
+    for(let i=0;i<masages.data.length;i++){
+        displayMasages(masages.data[i].masage)
+    }
+ 
+   }catch(err){
+    console.log(err)
+   }
+}
+
+function displayMasages(masasge){
+ console.log(masasge)
+}
