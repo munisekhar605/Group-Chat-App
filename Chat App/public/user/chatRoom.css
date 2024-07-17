@@ -1,6 +1,16 @@
 body{
     height: 100vh;
 }
+.chat-page-logo-img-container{
+   width: 30px;
+   height: 45px;
+   margin-left:10px;
+}
+.chat-page-logo-container{
+    font-family: roboto;
+    font-size: xx-large;
+    font-weight: 800;
+}
 .chat-app-container{
     text-align: center;
 }
@@ -9,21 +19,23 @@ body{
     margin-top: 85vh;
     justify-content: center;
     justify-items: end;
-    background-color: rgb(114, 114, 226);
+    background: linear-gradient(to right, red, black);
+    border-radius: 10px;
     padding: 10px;
 }
 .chat-app-input-item{
     padding: 10px;
     border-radius: 10px;
     border-style:none ;
-    width: 400px;
+    width:60%;
     font-family: roboto;
-    font-size: x-large;
+    font-size: large;
 }
 .chat-app-button-item{
     border-radius: 10px;
     padding: 10px;
     border-style: none;
     font-family: roboto;
-    font-size: x-large;
+    font-size: large;
+    margin-left: 10px;
 }

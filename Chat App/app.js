@@ -4,7 +4,9 @@ const cors=require('cors');
 const bodyparser=require('body-parser');
 
 const user=require('./routers/user');
-const sequelize=require('./util/db')
+const sequelize=require('./util/db');
+const usersTable=require('./model/usersTable');
+const masagesTable=require('./model/masagesTable');
 
 app.use(cors({
     origin:"http://localhost:5500",
@@ -12,7 +14,9 @@ app.use(cors({
 }));
 app.use(bodyparser.json())
 
-app.use(user);
+app.use('/user',user);
+masagesTable.belongsTo(usersTable,{constraints:true,onDelete:'CASCADE'});
+usersTable.hasMany(masagesTable);
 
 sequelize.sync()
 .then(re=>{

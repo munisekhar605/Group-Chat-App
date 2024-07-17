@@ -1,4 +1,4 @@
-const e = require('express');
+const express= require('express');
 const UserTable=require('../model/usersTable');
 const bcrypt=require('bcrypt');
 const jwt=require('jsonwebtoken');

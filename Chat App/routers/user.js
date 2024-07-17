@@ -1,8 +1,10 @@
 const express=require('express');
 const router=express.Router();
-const authentication=require('../controllers/authentication')
+const authentication=require('../controllers/authentication');
+const masages=require('../controllers/masages');
 
-router.post('/user/signup',authentication.signup);
-router.post('/user/login',authentication.login)
+router.post('/masagesave',masages.masageSave)
+router.post('/signup',authentication.signup);
+router.post('/login',authentication.login);
 
 module.exports=router;
