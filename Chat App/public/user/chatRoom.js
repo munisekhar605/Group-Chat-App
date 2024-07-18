@@ -4,25 +4,56 @@ async function masageSend(event){
     const masage={
         masage:event.target.masage.value
     };
+    const jwt=localStorage.getItem('jwt')
     try{
-        const masageSave=await axios.post('http://localhost:3000/user/masagesave',masage);
-        
+        const masageSave=await axios.post('http://localhost:3000/user/masagesave',masage,{ headers:{'Authorization':`${jwt}`}});   
     }catch(err){
-        alert('geting error')
+        if(err.response.status==401){
+            alert('please login')
+            window.location.href='./login.html'
+        }
+       
     }
 }
 
+function localStorageGet(){
+    let ndata=localStorage.getItem('massages');
+    return JSON.parse(ndata)
+}
 
-setInterval(async function(){
+function localStoragePost(data){
+    let ndata=JSON.stringify(data)
+    localStorage.setItem('massages',ndata);
+}
+function localStorageUpdate(oldData,data){
+    let mergedData = oldData.concat(data);
+    localStorage.setItem('massages',JSON.stringify(mergedData));
+}
+
+setTimeout(async function(){
+    const jwt=localStorage.getItem('jwt');
+    let lastId=0;
     try{
-        const masages=await axios.get('http://localhost:3000/user/masages');
-        displayMasages(masages.data)
-       }catch(err){
+        const data=localStorageGet()
+        if(data!==null){
+           lastId=data[data.length-1].id
+        }
+        // console.log(data)
+        const masages=await axios.get(`http://localhost:3000/user/masages/${lastId}`,{ headers:{'Authorization':`${jwt}`}});
+        if(0<masages.data.length && data==null){
+            localStoragePost(masages.data)
+        }else{
+            localStorageUpdate(data,masages.data)
+        }
+        displayMasages(localStorageGet())
+        console.log(masages)
+    }catch(err){
         console.log(err)
-       }
-},1000)
+    }
+},5000)
 
 function displayMasages(masasges){
+   if(masasges){
     const element=document.getElementById('masages');
     element.innerText=''
     const tElement=document.createElement('div')
@@ -31,9 +62,7 @@ function displayMasages(masasges){
         let tE=document.createElement('div')
         tE.innerHTML=`<div class="chat-item">${masasges[i].masage}</div>`;
         tElement.appendChild(tE)
-        console.log('i')
     }
     element.appendChild(tElement)
-
- 
+   }
 }

@@ -48,8 +48,10 @@ body{
 
 }
 .chat-item{
-    
-    background-color: rgb(216, 216, 216);
+    width: 35%;
+    margin-left: 25px;
+    color:white;
+    background: linear-gradient(to right, rgb(39, 139, 194), rgb(225, 221, 17));
     border-radius: 30px;
     margin: 19px;
     padding: 10px;
