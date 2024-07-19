@@ -10,7 +10,7 @@ async function userLogin(event){
          if(userLoginDataPost.status==200){
             alert('Login success');
             localStorage.setItem('jwt',userLoginDataPost.data);
-            window.location.href='./chatRoom.html'
+            window.location.href='./chatApp.html'
         }else if(userLoginDataPost.status==203){
             alert('Password Wrong');
         }

@@ -1,0 +1,88 @@
+.flex{
+    display: flex;
+}
+.main-container{
+    
+}
+.left-container{
+height: 100vh;
+}
+.right-container{
+height: 100vh;
+background-image: url('https://res.cloudinary.com/muni/image/upload/v1721285848/group%20chart%20application/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21_jbscf1.png');
+}
+.left-user-container{
+    background-color:#eee;
+    height: 70px;
+}
+.right-user-container{
+    background-color:#eee;
+    height: 70px;
+    border-left: solid rgb(182, 181, 181) 2px;
+}
+.left-user-logo{
+    border-radius: 50%;
+    height: 50px;
+    margin: 10px;
+    margin-left: 20px;
+}
+.left-user-name{
+    font-size: x-large;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.user-chat-container{
+
+    
+}
+.no-margin{
+    padding-left: 0 !important;
+}
+.no-margin-right{
+    padding-right: 0 !important;
+}
+.massages{
+    height: 80vh;
+    overflow-y: auto;
+}
+.massages{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+/* inputr form */
+.massage-input-form-container{
+    margin-left:15%;
+}
+.massage-input-item{
+    width: 70%;
+    height: 40px;
+    font-family: roboto;
+    font-size:x-large;
+    border-style:none;
+    border-radius:15px;
+    padding: 10px;
+}
+.masageSend-button-item{
+    height: 40px;
+    border-style:none;
+    border-radius: 15px;
+    background-color: rgb(76, 76, 223);
+    padding: 10px;
+    color:white;
+}
+
+.chat-item{
+
+    background-color: rgb(24, 89, 143);
+    margin: 15px;
+    font-family: roboto;
+    font-size: x-large;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+}
+.chat-container-dom{
+    width: 40%;
+}
