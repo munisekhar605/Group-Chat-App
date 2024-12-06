@@ -1,0 +1,169 @@
+.flex{
+    display: flex;
+}
+.main-container{
+    
+}
+.left-container{
+height: 100vh;
+background: linear-gradient(to right, red, black);
+}
+.right-container{
+height: 100vh;
+background-image: url('https://res.cloudinary.com/muni/image/upload/v1721285848/group%20chart%20application/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21_jbscf1.png');
+}
+.left-user-container{
+    background-color:#eeeeee;
+    height: 70px;
+}
+.right-user-container{
+    background-color:#eee;
+    height: 70px;
+    border-left: solid rgb(198, 93, 93) 2px;
+}
+.left-user-logo{
+    border-radius: 50%;
+    height: 50px;
+    margin: 10px;
+    margin-left: 20px;
+}
+.left-user-name{
+    font-size: x-large;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.user-chat-container{
+
+    
+}
+.no-margin{
+    padding-left: 0 !important;
+}
+.no-margin-right{
+    padding-right: 0 !important;
+}
+.massages{
+    height: 80vh;
+    overflow-y: auto;
+}
+.massages{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+/* inputr form */
+.massage-input-form-container{
+    margin-left:15%;
+}
+.massage-input-item{
+    width: 70%;
+    height: 40px;
+    font-family: roboto;
+    font-size:x-large;
+    border-style:none;
+    border-radius:15px;
+    padding: 10px;
+}
+.masageSend-button-item{
+    height: 40px;
+    border-style:none;
+    border-radius: 15px;
+    background: linear-gradient(to right, red, black);
+    padding: 10px;
+    color:white;
+}
+
+.chat-item{
+    background-color:white;
+    margin: 15px;
+    font-family: roboto;
+    font-size: x-large;
+    padding: 10px;
+    border-radius: 15px;
+    /* color: white; */
+}
+.chat-container-dom{
+    width: 40%;
+}
+
+/* group-add-icon */
+.group-add-icon{
+    margin-left: 10px;
+    margin-top: 15px;
+    
+}
+.group-add-icon-text{
+    margin-left: 2px;
+    margin-top: 25px;
+    font-weight: 600;
+}
+.group-create-input-item{
+    margin-top: 20px;
+    border-radius:10px;
+    border-style:none;
+    height: 30px;
+    width: 200px;
+    font-size: large;
+    margin-left: 25px;
+    background-color:#eee;
+    padding: 5px;
+    font-weight: 600;
+}
+.group-create-button{
+    border-style: none;
+    border-radius: 10px;
+    background-color:#eee;
+    height: 30px;
+    font-family: roboto;
+    font-size: large;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.group-item{
+    margin: 25px;
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 2px;
+}
+.group-icon{
+    margin: 5px;
+    width: 40px;
+    height:40px;
+    border-radius: 70%;
+
+}
+.group-name-item{
+    font-size: large;
+    font-family: roboto;
+    font-weight: 700;
+    margin: 10px;
+}
+.user-add-item{
+    margin-top: 20px;
+    height: 30px;
+    padding: 5px;
+    background: linear-gradient(to right, red, black);
+    border-radius: 15px;
+    color:white;
+    margin-left: 70%;
+    font-size: larger;
+    font-family: roboto;
+    border-style: none;
+}
+.right-user-name{
+    margin-top: 18px;
+    font-family: roboto;
+    font-weight: 700;
+    font-size: x-large;
+    margin-left: 7px;
+}
+.right-user-logo{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.home-logo{
+    padding: 10px;
+    margin-top: 30%;
+    margin-left: 50%;
+}

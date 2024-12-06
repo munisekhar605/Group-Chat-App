@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="chatApp.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="chatApp.js" defer></script>
+    <title>Chat APp</title>
+</head>
+<body>
+
+    <div class="main-container row">
+            <div class="left-container no-margin-right col-4 ">
+                <div class="all-users-container">
+                    <div class="left-user-container flex">
+                        <img class="left-user-logo" src="https://res.cloudinary.com/muni/image/upload/v1721052431/group%20chart%20application/xhqzvz0xmq5mevv2xh4u.png"></img>
+                        <div class="left-user-name">Sharpner Group Chat App</div>
+                        <svg onclick="addGroup()" xmlns="http://www.w3.org/2000/svg" width="56" height="40" fill="currentColor" class="bi group-add-icon bi-plus" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/></svg>
+                    </div>
+                    <div id="groupcreate"></div>
+                    <div id='groups-items-container' class="griups-items-contaner">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-container no-margin col-8" id="right-container">
+                <img class="home-logo" src="https://res.cloudinary.com/muni/image/upload/v1721052431/group%20chart%20application/xhqzvz0xmq5mevv2xh4u.png"></img>
+            </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+<script type="module" src="chatApp.js"></script>
+
+</body>
+</html>
